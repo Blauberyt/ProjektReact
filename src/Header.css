@@ -1,4 +1,11 @@
 .header-main {
     background-color: #0002de;
-    background-image: linear-gradient(90deg, #0002de 0%, #f711fb 50%, #ffffff 100%);
+    background-image: linear-gradient(90deg, #0002de 25%, #f711fb 50%);
+}
+
+.login-button {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    text-transform: none;
+    font-size: 0.875rem;
+    padding: 6px 12px;
 }

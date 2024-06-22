@@ -8,7 +8,7 @@ const APP_ID = 'c8580dfa';
 const APP_KEY = '3c7100a6a70e7841d5a938249a544a5b';
 
 export const Searchbar = ({ setRecipes }) => {
-  const [query, setQuery] = useState(   );
+  const [query, setQuery] = useState();
   console.log(query);
   async function fetchRecipes() {
     const response = await fetch(
@@ -27,19 +27,26 @@ export const Searchbar = ({ setRecipes }) => {
   }, [query]);
 
   return (
-    <TextField
-      label="Wyszukaj"
-      onChange={handleChange}
-      InputProps={{
-        endAdornment: (
-          <InputAdornment>
-            <IconButton onClick={fetchRecipes}>
-              <SearchIcon />
-            </IconButton>
-          </InputAdornment>
-        ),
-      }}
-      fullWidth
-    />
+        <TextField
+          label="Wyszukaj"
+          onChange={handleChange}
+          InputProps={{
+            endAdornment: (
+              <InputAdornment position = "end">
+                <IconButton onClick={fetchRecipes}>
+                  <SearchIcon />
+                </IconButton>
+              </InputAdornment>
+            ),
+          }}
+          sx={{
+              width: '70%',
+              margin: '10px auto 0 auto', // Dodanie marginesu u góry
+              padding: '10px',
+              '@media (max-width: 767px)': {
+                  width: '90%',
+              },
+          }}
+      />
   );
 };
