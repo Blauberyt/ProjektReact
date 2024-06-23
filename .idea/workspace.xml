@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23a4cab7-54d1-4bc0-b3c9-65fb78a40df8" name="Changes" comment="Debounce added to search query">
+    <list default="true" id="23a4cab7-54d1-4bc0-b3c9-65fb78a40df8" name="Changes" comment="Final touches">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Header.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +116,7 @@
       <workItem from="1716385287075" duration="44000" />
       <workItem from="1717678305469" duration="529000" />
       <workItem from="1719048803805" duration="393000" />
-      <workItem from="1719049240055" duration="22838000" />
+      <workItem from="1719049240055" duration="23666000" />
     </task>
     <task id="LOCAL-00001" summary="Replace favicon">
       <option name="closed" value="true" />
@@ -143,7 +142,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719104718629</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Final touches">
+      <option name="closed" value="true" />
+      <created>1719105643761</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1719105643761</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -164,6 +171,7 @@
     <MESSAGE value="Replace favicon" />
     <MESSAGE value="Searchbar adjustment" />
     <MESSAGE value="Debounce added to search query" />
-    <option name="LAST_COMMIT_MESSAGE" value="Debounce added to search query" />
+    <MESSAGE value="Final touches" />
+    <option name="LAST_COMMIT_MESSAGE" value="Final touches" />
   </component>
 </project>
