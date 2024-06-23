@@ -13,7 +13,7 @@ export default function ButtonAppBar(props) {
         <Toolbar>
           <Box sx={{ flexGrow: 1 }}>
             <Typography variant="h4" component="div">
-              Żarciomat 🍗
+              🍗 Żarciomat 🍗
             </Typography>
             <Typography variant="h6" component="div">
               Znajdź swoje żarcie!

@@ -9,40 +9,12 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 export const themeOptions = {
   palette: {
-    mode: "light",
+    mode: 'light',
     primary: {
-      main: "#67be23",
-      contrastText: "#fff",
+      main: '#0002de',
     },
     secondary: {
-      main: "#2A132E",
-      contrastText: "#fff",
-    },
-    background: {
-      default: "#212121",
-      paper: "#242424",
-    },
-    success: {
-      main: "#67be23",
-      contrastText: "#fff",
-    },
-    error: {
-      main: "#ee2a1e",
-      contrastText: "#fff",
-    },
-    warning: {
-      main: "#fa8c16",
-      contrastText: "#fff",
-    },
-    info: {
-      main: "#1890ff",
-      contrastText: "#fff",
-    },
-    divider: "rgba(0,0,0,0)",
-    text: {
-      primary: "#fff",
-      secondary: "rgba(255,255,255,0.7)",
-      disabled: "#d1d1d1",
+      main: '#f711fb',
     },
   },
   };

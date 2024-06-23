@@ -1,52 +1,67 @@
-import { TextField } from "@mui/material";
-import { InputAdornment } from "@mui/material";
-import { IconButton } from "@mui/material";
-import SearchIcon from "@mui/icons-material/Search";
-import { useState, useEffect } from "react";
+
+import React, { useState, useEffect } from 'react';
+import { TextField, InputAdornment, IconButton } from '@mui/material';
+import SearchIcon from '@mui/icons-material/Search';
 
 const APP_ID = 'c8580dfa';
 const APP_KEY = '3c7100a6a70e7841d5a938249a544a5b';
 
 export const Searchbar = ({ setRecipes }) => {
-  const [query, setQuery] = useState();
-  console.log(query);
-  async function fetchRecipes() {
-    const response = await fetch(
-      `https://api.edamam.com/api/recipes/v2?q=${query}&type=public&app_id=${APP_ID}&app_key=${APP_KEY}`,
-    );
-    const data = await response.json();
-    setRecipes(data.hits);
-  }
+    const [query, setQuery] = useState('');
+    const [debouncedQuery, setDebouncedQuery] = useState(query);
 
-  function handleChange(event) {
-    setQuery(event.target.value);
-  }
+    useEffect(() => {
+        const handler = setTimeout(() => {
+            setDebouncedQuery(query);
+        }, 500);
 
-  useEffect(() => {
-    fetchRecipes();
-  }, [query]);
+        // Clear timeout if the query changes (also on component unmount)
+        return () => {
+            clearTimeout(handler);
+        };
+    }, [query]);
 
-  return (
+    useEffect(() => {
+        const fetchRecipes = async () => {
+            if (debouncedQuery) {
+                const response = await fetch(
+                    `https://api.edamam.com/api/recipes/v2?q=${debouncedQuery}&type=public&app_id=${APP_ID}&app_key=${APP_KEY}`,
+                );
+                const data = await response.json();
+                setRecipes(data.hits);
+            }
+        };
+
+        fetchRecipes();
+    }, [debouncedQuery, setRecipes]);
+
+    const handleChange = (event) => {
+        setQuery(event.target.value);
+    };
+
+    return (
         <TextField
-          label="Wyszukaj"
-          onChange={handleChange}
-          InputProps={{
-            endAdornment: (
-              <InputAdornment position = "end">
-                <IconButton onClick={fetchRecipes}>
-                  <SearchIcon />
-                </IconButton>
-              </InputAdornment>
-            ),
-          }}
-          sx={{
-              width: '70%',
-              margin: '10px auto 0 auto', // Dodanie marginesu u góry
-              padding: '10px',
-              '@media (max-width: 767px)': {
-                  width: '90%',
-              },
-          }}
-      />
-  );
+            label="Wyszukaj"
+            onChange={handleChange}
+            value={query}
+            InputProps={{
+                endAdornment: (
+                    <InputAdornment position="end">
+                        <IconButton onClick={() => setDebouncedQuery(query)}>
+                            <SearchIcon />
+                        </IconButton>
+                    </InputAdornment>
+                ),
+            }}
+            sx={{
+                width: '70%',
+                margin: '10px auto 0 auto',
+                padding: '10px',
+                '@media (max-width: 767px)': {
+                    width: '90%',
+                },
+            }}
+        />
+    );
 };
+
