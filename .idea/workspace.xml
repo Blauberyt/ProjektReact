@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23a4cab7-54d1-4bc0-b3c9-65fb78a40df8" name="Changes" comment="Searchbar adjustment">
+    <list default="true" id="23a4cab7-54d1-4bc0-b3c9-65fb78a40df8" name="Changes" comment="Debounce added to search query">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Header.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Searchbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Searchbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +117,7 @@
       <workItem from="1716385287075" duration="44000" />
       <workItem from="1717678305469" duration="529000" />
       <workItem from="1719048803805" duration="393000" />
-      <workItem from="1719049240055" duration="21802000" />
+      <workItem from="1719049240055" duration="22838000" />
     </task>
     <task id="LOCAL-00001" summary="Replace favicon">
       <option name="closed" value="true" />
@@ -139,7 +135,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719096499444</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Debounce added to search query">
+      <option name="closed" value="true" />
+      <created>1719104718629</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1719104718629</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -159,6 +163,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Replace favicon" />
     <MESSAGE value="Searchbar adjustment" />
-    <option name="LAST_COMMIT_MESSAGE" value="Searchbar adjustment" />
+    <MESSAGE value="Debounce added to search query" />
+    <option name="LAST_COMMIT_MESSAGE" value="Debounce added to search query" />
   </component>
 </project>
