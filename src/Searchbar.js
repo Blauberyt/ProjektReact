@@ -3,8 +3,8 @@ import React, { useState, useEffect } from 'react';
 import { TextField, InputAdornment, IconButton } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 
-const APP_ID = 'c8580dfa';
-const APP_KEY = '3c7100a6a70e7841d5a938249a544a5b';
+const APP_ID = '';
+const APP_KEY = '';
 
 export const Searchbar = ({ setRecipes }) => {
     const [query, setQuery] = useState('');
